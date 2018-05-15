@@ -18,5 +18,8 @@
   "homepage": "https://github.com/BUNN1E5/PortfolioSite#readme",
   "dependencies": {
     "bulma": "^0.7.1"
+  },
+  "devDependencies": {
+    "bulma-start": "0.0.2"
   }
 }
