@@ -1,0 +1,7 @@
+React
+Particles.js - https://www.javascripting.com/view/particles-js | https://www.npmjs.com/package/react-particles-js
+MathJax - https://www.javascripting.com/view/mathjax
+Bootstraps - https://getbootstrap.com
+(Maybe)Parallax.js - https://www.javascripting.com/view/parallax | https://www.npmjs.com/package/react-parallax | https://www.javascripting.com/view/parallax
+(Maybe)Pace.js - http://github.hubspot.com/pace/docs/welcome/
+Pace - https://www.javascripting.com/view/pace
