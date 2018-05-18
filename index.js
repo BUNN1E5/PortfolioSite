@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-$('a[href^="#"]').on('click', 'a[href^="#"]', function (event) {
+$(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
 
     $('html, body').animate({
