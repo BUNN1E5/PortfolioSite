@@ -32,8 +32,13 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     }, 500);
 });
 
-Github.userProfile({
+/*Github.userProfile({
   username: "BUNN1E5",
-  OAuth: '766a285203d3508c807960883ace3e44fb7d19c9',
+  OAuth: '766a285203d3508c807960883ace3e44fb7d19c9', //Oh lol I'm dumb
   selector: "#myProfile"
+});*/
+
+Github.userActivity({
+    username: 'BUNN1E5',
+    selector: '#myProfile'
 });
