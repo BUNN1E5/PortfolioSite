@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  Github.userActivity({
+  username: 'BUNN1E5',
+  selector: '#myProfile'
+  });
 });
 
 $(document).on('click', 'a[href^="#"]', function (event) {
@@ -37,8 +41,3 @@ $(document).on('click', 'a[href^="#"]', function (event) {
   OAuth: '766a285203d3508c807960883ace3e44fb7d19c9', //Oh lol I'm dumb
   selector: "#myProfile"
 });*/
-
-Github.userActivity({
-    username: 'BUNN1E5',
-    selector: '#myProfile'
-});
