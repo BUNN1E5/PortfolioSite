@@ -4,3 +4,11 @@
   visibility: visible;
   transition: opacity 600ms, visibility 600ms;
 }
+
+.overlay-canvas{
+    z-index: 100;
+    position: absolute; /* Maybe try fixed? */
+    width:  100%;
+    height: 100%;
+    margin: 0px;
+}
