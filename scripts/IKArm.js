@@ -11,12 +11,16 @@ function start(){
     c.canvas.height = window.innerHeight;
 
     bones = [new Bone({x:c.canvas.width/2, y:c.canvas.height/2}, 0, 0)];
-    bones.push(new Bone(bones[bones.length - 1], 100, 10));
-    bones.push(new Bone(bones[bones.length - 1], 100, 10));
-    bones.push(new Bone(bones[bones.length - 1], 100, 10));
-    bones.push(new Bone(bones[bones.length - 1], 100, 10));
+    bones.push(new Bone(bones[bones.length - 1], 50, 10));
+    bones.push(new Bone(bones[bones.length - 1], 50, 7));
+    bones.push(new Bone(bones[bones.length - 1], 50, 5));
+    bones.push(new Bone(bones[bones.length - 1], 50, 2));
     endbone = bones[bones.length - 1];
 }
+
+var loopCount = 0;
+
+var distance = 0, angle = 0;
 
 function loop(){
 
@@ -24,14 +28,21 @@ function loop(){
     c.canvas.height = window.innerHeight;
 
     c.clearRect(0, 0, c.canvas.width, c.canvas.height);
-    bones[0].angle = Math.atan2(-bones[0].position.y + mousePos.y, -bones[0].position.x + mousePos.x);
+    //bones[1].angle = Math.atan2(-bones[1].position.y + mousePos.y, -bones[1].position.x + mousePos.x);
     //endbone.recalculate(true);
+    //endbone.localangle =  Math.atan2(-endbone.position.y + mousePos.y, -endbone.position.x + mousePos.x);
+    bones[0].recalculate(false);
+    distance = Math.sqrt((mousePos.x - bones[0].position.x) * (mousePos.x - bones[0].position.x) + (mousePos.y - bones[0].position.y) * (mousePos.y - bones[0].position.y));
+    angle = Math.atan2(mousePos.y - bones[0].position.y, mousePos.x -bones[0].position.x);
 
-    for(var i = 0; i < bones.length; i++){
+
+    endbone.localangle = Math.atan2(mousePos.y - endbone.position.y, mousePos.x -endbone.position.x);
+    for(var i = 1; i < bones.length; i++){
         bones[i].recalculate(false);
+        //bones[i].localangle =  (endbone.localangle - angle)/bones.length;
+        //bones[i].localangle = angle;
         drawJoint(bones[i].position, bones[i].width);
         drawBones(bones[i].position, bones[i].angle, bones[i].width, bones[i].length);
-
     }
 
     //console.log("X : " + endbone.end.x + " , Y : "  + endbone.end.y);
@@ -41,7 +52,7 @@ function loop(){
     //console.log(endbone.angle * 57.2958);
 
 
-
+    loopCount+=1;
     requestAnimationFrame(loop);
 }
 
@@ -52,8 +63,12 @@ function drawConnectedLine(points, width){
     c.lineTo(start.x + width * Math.cos(angle), start.y + width * Math.sin(angle))
     c.lineTo(end.x + width * Math.cos(angle), end.y + width * Math.sin(angle));
     c.lineTo(end.x - width * Math.cos(angle), end.y - width * Math.sin(angle));
-    c.lineTo(start.x - width * Math.cos(angle), start.y - width * Math.sin(angle));
+    //c.lineTo(start.x - width * Math.cos(angle), start.y - width * Math.sin(angle));
     //console.log("draw line from " + "[" + start.x + "," + start.y + "]" + " to " + "[" + end.x + "," + end.y + "]")
+    c.closePath();
+    c.stroke();
+    c.lineWidth = 5;
+    c.fillStyle = '#8ED6FF';
     c.fill();
 }
 
@@ -95,13 +110,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 class Bone{
 
-    constructor(parent, length, width){
+    //hAngle -> High angle or max angle
+    //lAngle -> Low Angle or min angle
+    constructor(parent, length, width, hAngle, lAngle){
         this.parent = parent;
         this.length = length;
         this.width = width;
         this.localangle = 0;
         this.angle = 0;
         this.end = {x:0 , y:0};
+        this.distance = 0;
+        //this.
 
         if(parent instanceof Bone){
             this.position = {x:parent.end.x, y:parent.end.y};
@@ -151,6 +170,7 @@ class Bone{
         c.lineTo(this.position.x + this.width * Math.cos(theta), this.position.y + this.width * Math.sin(theta));
         c.lineTo(this.position.x + this.length * Math.cos(this.angle) + this.width * Math.cos(theta), this.position.y + this.length * Math.sin(this.angle) + this.width * Math.sin(theta)); //Very inportant that we use angle vs theta
         c.lineTo(this.position.x + this.length * Math.cos(this.angle) - this.width * Math.cos(theta), this.position.y + this.length * Math.sin(this.angle) - this.width * Math.sin(theta));
+        c.lineTo(this.position.x - this.width * Math.cos(theta), this.position.y - this.width * Math.sin(theta));
 
         if(this.parent instanceof Bone){
             this.parent.drawBones();
@@ -158,7 +178,4 @@ class Bone{
         //console.log("draw line from " + "[" + start.x + "," + start.y + "]" + " to " + "[" + end.x + "," + end.y + "]")
         c.fill();
     }
-
-
-
 }
