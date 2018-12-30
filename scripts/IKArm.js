@@ -39,8 +39,8 @@ function loop(){
     endbone.localangle = Math.atan2(mousePos.y - endbone.position.y, mousePos.x -endbone.position.x);
     for(var i = 1; i < bones.length; i++){
         bones[i].recalculate(false);
-        //bones[i].localangle =  (endbone.localangle - angle)/bones.length;
-        //bones[i].localangle = angle;
+        bones[i].localangle =  (endbone.localangle - angle)/bones.length;
+        bones[i].localangle = angle;
         drawJoint(bones[i].position, bones[i].width);
         drawBones(bones[i].position, bones[i].angle, bones[i].width, bones[i].length);
     }
