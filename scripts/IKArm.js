@@ -3,19 +3,26 @@ var c;
 
 var mousePos = {x:0, y:0};
 
-var bones;
-var endbone;
+var left, right;
+var left_endbone, right_endbone;
 //Runs just before loop
 function start(){
     c.canvas.width  = window.innerWidth;
     c.canvas.height = window.innerHeight;
 
-    bones = [new Bone({x:c.canvas.width/2, y:c.canvas.height/2}, 0, 0)];
-    bones.push(new Bone(bones[bones.length - 1], 50, 10));
-    bones.push(new Bone(bones[bones.length - 1], 50, 7));
-    bones.push(new Bone(bones[bones.length - 1], 50, 5));
-    bones.push(new Bone(bones[bones.length - 1], 50, 2));
-    endbone = bones[bones.length - 1];
+    left = [new Bone({x:0, y:c.canvas.height/2}, 0, 0)];
+    left.push(new Bone(left[left.length - 1], 50, 10));
+    left.push(new Bone(left[left.length - 1], 50, 7));
+    left.push(new Bone(left[left.length - 1], 50, 5));
+    left.push(new Bone(left[left.length - 1], 50, 2));
+    left_endbone = left[left.length - 1];
+
+    right = [new Bone({x:c.canvas.width /2, y:c.canvas.height/2}, 0, 0)];
+    right.push(new Bone(right[right.length - 1], 50, 10));
+    right.push(new Bone(right[right.length - 1], 50, 7));
+    right.push(new Bone(right[right.length - 1], 50, 5));
+    right.push(new Bone(right[right.length - 1], 50, 2));
+    right_endbone = right[right.length - 1];
 }
 
 var loopCount = 0;
@@ -31,19 +38,25 @@ function loop(){
     //bones[1].angle = Math.atan2(-bones[1].position.y + mousePos.y, -bones[1].position.x + mousePos.x);
     //endbone.recalculate(true);
     //endbone.localangle =  Math.atan2(-endbone.position.y + mousePos.y, -endbone.position.x + mousePos.x);
-    bones[0].recalculate(false);
-    distance = Math.sqrt((mousePos.x - bones[0].position.x) * (mousePos.x - bones[0].position.x) + (mousePos.y - bones[0].position.y) * (mousePos.y - bones[0].position.y));
-    angle = Math.atan2(mousePos.y - bones[0].position.y, mousePos.x -bones[0].position.x);
+    left[0].recalculate(false);
+    right[0].recalculate(false);
+    right[0].localangle = Math.PI;
+    left_distance = Math.sqrt((mousePos.x - left[0].position.x) * (mousePos.x - left[0].position.x) + (mousePos.y - left[0].position.y) * (mousePos.y - left[0].position.y));
+    right_distance = Math.sqrt((mousePos.x - right[0].position.x) * (mousePos.x - right[0].position.x) + (mousePos.y - right[0].position.y) * (mousePos.y - right[0].position.y));
+    left_angle = Math.atan2(mousePos.y - left[0].position.y, mousePos.x -left[0].position.x);
+    right_angle = -Math.atan2(mousePos.y - right[0].position.y, mousePos.x - right[0].position.x);
 
 
-    endbone.localangle = Math.atan2(mousePos.y - endbone.position.y, mousePos.x -endbone.position.x);
-    for(var i = 1; i < bones.length; i++){
-        bones[i].recalculate(false);
-        bones[i].localangle =  (endbone.localangle - angle)/bones.length;
-        bones[i].localangle = angle;
-        drawJoint(bones[i].position, bones[i].width);
-        drawBones(bones[i].position, bones[i].angle, bones[i].width, bones[i].length);
+    left_endbone.localangle = Math.atan2(mousePos.y - left_endbone.position.y, mousePos.x -left_endbone.position.x);
+    right_endbone.localangle = Math.atan2(mousePos.y - right_endbone.position.y, mousePos.x -right_endbone.position.x) ;
+    for(var i = 1; i < left.length; i++){
+        left[i].recalculate(false);
+        //left[i].localangle = (left_endbone.localangle - angle)/left.length;
+        left[i].localangle = left_angle;
+        drawJoint(left[i].position, left[i].width);
+        drawBones(left[i].position, left[i].angle, left[i].width, left[i].length);
     }
+
 
     //console.log("X : " + endbone.end.x + " , Y : "  + endbone.end.y);
 
