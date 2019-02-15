@@ -1,10 +1,9 @@
-
-var pages[];
+var pages;
 
 //Find out which pages
 
 var urlBase = "WeeklyChallenge/Week"
-for(int i = 0; i < 52; i++){
+for(var i = 0; i < 52; i++){
     var url = urlBase + i;
 
     if(is404(url)){
