@@ -1,30 +1,29 @@
+
 var pages = [];
+var doc;
 
-//Find out which pages
+document.addEventListener('DOMContentLoaded', function () {
+    doc = document.getElementById("list");
 
-var doc = document.getElementById("list");
+    var currUrl = document.URL;
+    currUrl = currUrl.substring(currUrl.indexOf("/"), currUrl.lastIndexOf('/')+1);
 
-var currUrl = document.URL;
-currUrl = currUrl.substring(currUrl.indexOf("/"), currUrl.lastIndexOf('/')+1);
-
-var urlBase = document.URL + "Week"
-for(var i = 1; i < 52; i++){
-    var url = urlBase + i;
-    console.log("checking " + url);
-    if(is404(url)){
-        break;
+    var urlBase = document.URL + "Week"
+    for(var i = 1; i < 52; i++){
+        var url = urlBase + i;
+        console.log("checking " + url);
+        if(is404(url)){
+            break;
+        }
+        console.log("found " + url);
+        pages.push(url);
+        addPage(url);
     }
-    console.log("found " + url);
-    pages.push(url);
-    addPage(url);
-}
-
+});
 
 function addPage(url){
     doc.innerHTML += "<div><iframe src=\"" + url + "\"></iframe></div>";
 }
-
-
 
 function is404(url) {
     var http = new XMLHttpRequest();
