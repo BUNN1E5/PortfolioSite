@@ -1,4 +1,4 @@
-var pages;
+var pages = [];
 
 //Find out which pages
 
