@@ -72,8 +72,8 @@ class Eyes{
         var angle = Math.atan2(mousePos.y - this.position.y, mousePos.x - this.position.x);
         c.beginPath();
         c.save();
+        
         var path = new Path2D("m -92.339873,0.29025539 c 56.02747,-61.03891739 137.820856,-60.95338539 193.769803,0 -55.975077,60.98184261 -137.735802,61.04603261 -193.769803,0 z");
-
         c.translate(this.position.x, this.position.y);
 
         c.lineWidth = 10;
