@@ -3,7 +3,7 @@ var pages = [];
 //Find out which pages
 
 var currUrl = document.URL;
-currUrl = currUrl.substring(0, currUrl.lastIndexOf('/')+1);
+currUrl = currUrl.substring(currUrl.indexOf("/"), currUrl.lastIndexOf('/')+1);
 
 var urlBase = document.URL + "Week"
 for(var i = 1; i < 52; i++){
