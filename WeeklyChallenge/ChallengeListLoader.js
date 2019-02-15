@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function addPage(url){
-    doc.innerHTML += "<div><iframe src=\"" + url + "\"></iframe></div>";
+    doc.innerHTML += "<div><iframe src=\"" + url + "\" style=\"width:100%; height:100%;\"></iframe></div>";
 }
 
 function is404(url) {
