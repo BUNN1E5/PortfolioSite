@@ -2,6 +2,8 @@ var pages = [];
 
 //Find out which pages
 
+var doc = document.getElementById("list");
+
 var currUrl = document.URL;
 currUrl = currUrl.substring(currUrl.indexOf("/"), currUrl.lastIndexOf('/')+1);
 
@@ -19,7 +21,7 @@ for(var i = 1; i < 52; i++){
 
 
 function addPage(url){
-    document.getElementById("list").innerHTML += "<div><iframe src=\"" + url + "\"></iframe></div>";
+    doc.innerHTML += "<div><iframe src=\"" + url + "\"></iframe></div>";
 }
 
 
