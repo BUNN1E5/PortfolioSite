@@ -2,7 +2,7 @@ var pages = [];
 
 //Find out which pages
 
-var urlBase = "WeeklyChallenge/Week"
+var urlBase = "/Week"
 for(var i = 1; i < 52; i++){
     var url = urlBase + i;
     console.log("checking " + url);
