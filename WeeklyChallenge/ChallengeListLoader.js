@@ -19,7 +19,7 @@ for(var i = 1; i < 52; i++){
 
 
 function addPage(url){
-    document.getElementById("list").innerHTML += "<div  class=\"container\"><iframe src=\"" + url + \"></iframe></div>";
+    document.getElementById("list").innerHTML += "<div class=\"container\"><iframe src=\"" + url + "\"></iframe></div>";
 }
 
 
