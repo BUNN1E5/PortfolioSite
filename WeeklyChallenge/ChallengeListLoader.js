@@ -14,11 +14,12 @@ for(var i = 1; i < 52; i++){
     }
     console.log("found " + url);
     pages.push(url);
+    addPage(url);
 }
 
 
 function addPage(url){
-    document.getElementById("list").innerHTML = "";
+    document.getElementById("list").innerHTML += "<div  class=\"container\"><iframe src=\"" + url + \"></iframe></div>";
 }
 
 
