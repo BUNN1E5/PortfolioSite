@@ -5,7 +5,7 @@ var pages = [];
 var currUrl = document.URL;
 currUrl = currUrl.substring(0, currUrl.lastIndexOf('/')+1);
 
-var urlBase = document.URL + "/Week"
+var urlBase = document.URL + "Week"
 for(var i = 1; i < 52; i++){
     var url = urlBase + i;
     console.log("checking " + url);
