@@ -5,7 +5,7 @@ var pages;
 var urlBase = "WeeklyChallenge/Week"
 for(var i = 1; i < 52; i++){
     var url = urlBase + i;
-
+    console.log("checking " + url);
     if(is404(url)){
         break;
     }
