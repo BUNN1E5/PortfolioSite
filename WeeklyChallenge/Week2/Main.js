@@ -2,7 +2,7 @@ var canvas;
 var c;
 var mousePos = {x:0, y:0};
 
-var phsyicsLoop = .0002;
+var phsyicsLoop = .002;
 var event;
 /*
 

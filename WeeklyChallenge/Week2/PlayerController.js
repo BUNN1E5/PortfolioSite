@@ -7,12 +7,12 @@ class PlayerController{
 
     jump(event, key){
         if(event.key == key)
-            this.p.velocity.y = -.03;
+            this.p.velocity.y = -30;
     }
 
     move(event, key, direction){
         if(event.key == key)
-            this.p.velocity.x = direction * .03;
+            this.p.velocity.x = direction * 30;
     }
 
     start(){}

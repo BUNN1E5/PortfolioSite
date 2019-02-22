@@ -3,11 +3,11 @@ function mod(n, m) {
 }
 
 class PhysicsCollider{
-    constructor(object, colliders, id, size, gravity = {x:0, y:2}, drag=10){
+    constructor(object, colliders, id, size, gravity = {x:0, y:200}, drag=5){
         this.object = object;
         this.gravity = gravity;
         this.velocity = {x:0, y:0}
-        this.maxVelocity = {x: 2, y:2};
+        this.maxVelocity = {x: 200, y:200};
         this.drag = drag;
 
         this.id = id;
@@ -76,8 +76,8 @@ class PhysicsCollider{
 
 
     solvePosition(){
-        let x = this.object.roomPosition.x + this.object.roomSubPosition.x + this.velocity.x;
-        let y = this.object.roomPosition.y + this.object.roomSubPosition.y + this.velocity.y;
+        let x = this.object.roomPosition.x + this.object.roomSubPosition.x + this.velocity.x * phsyicsLoop;
+        let y = this.object.roomPosition.y + this.object.roomSubPosition.y + this.velocity.y * phsyicsLoop;
         this.object.setPosition({x:x, y:y});
     }
 
