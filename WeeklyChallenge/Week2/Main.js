@@ -65,7 +65,6 @@ function loop(){
     obj.loop();
 
     room.renderRoom();
-
     requestAnimationFrame(loop);
 }
 

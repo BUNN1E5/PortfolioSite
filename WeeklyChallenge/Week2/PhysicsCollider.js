@@ -3,12 +3,12 @@ function mod(n, m) {
 }
 
 class PhysicsCollider{
-    constructor(object, colliders, id, size, gravity = {x:0, y:1}, drag=.1){
+    constructor(object, colliders, id, size, gravity = {x:0, y:2}, drag=10){
         this.object = object;
         this.gravity = gravity;
         this.velocity = {x:0, y:0}
         this.maxVelocity = {x: 2, y:2};
-        this.drag = .5;
+        this.drag = drag;
 
         this.id = id;
         this.colliders = colliders;
