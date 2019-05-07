@@ -1,0 +1,63 @@
+https://learntocodewith.me/posts/portfolio-tips/
+
+------------------------------
+
+- Build a logo for personal site
+- Build guide (And fix old ones that were for Patribots)
+
+------------------------------
+
+- Logo and Tagline
+  - Need a consistent theme for the site
+- Header
+  - Need something unique
+    - Doesn't need to be a list
+    - Can be something a bit more unique
+      - Maybe a game so select where to go?
+
+
+- About me
+  - A Photo
+  - Describe who I   am, what I do, what are my hobbies
+    - Like being Patribots Programming mentor
+  - Testimonials??
+    - Do I need these?
+  - Blog (I need to do this in order to level up my writing)
+    - Or blog videos
+
+- Skills
+  - Languages
+    - html
+    - js
+    - c#
+    - c++ (I need to review this though)
+    - java
+    - python
+    - git
+
+  - Libraries & Technologies
+    - OpenCV
+    - Android Programming
+    - Unity3D
+
+  - Programs (Looks like I'm reaching?)
+    - Microsoft Suite
+    - Google Docs
+
+
+-Previous Works?
+  - SDSU Housing Application
+
+- Current Projects (Work and Personal, Open or closed source)
+  - For all projects I need a writeup for them
+- Volunteer Work (Maybe? If I can fill out more, this might be too much)
+
+
+- Resume
+- Contact Information
+  - Social Media Accounts
+    - github - https://github.com/BUNN1E5/
+    - linkedin - https://www.linkedin.com/in/jacob-golden-needham-3279bb133/
+    - twitter (prob not)
+  - Contact me form?
+    - Forward to Email
