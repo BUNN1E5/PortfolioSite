@@ -1,12 +1,19 @@
 https://learntocodewith.me/posts/portfolio-tips/
+https://skillcrush.com/2015/03/12/impressive-tech-portfolio/
 
-------------------------------
+--------------------Extra stuff------------------
 
 - Build a logo for personal site
 - Should I show off my 3D prints? Maybe?
 - Make sure I COMMENT MY CODE!!!
+- Request for testimonials?
+  - Friends/Co-Workers?
+  
+- Maybe do dark color scheme??
 
-------------------------------
+-------------------------------------------------
+
+================== Main Page ====================
 
 - Logo and Tagline
   - Need a consistent theme for the site
@@ -83,3 +90,24 @@ https://learntocodewith.me/posts/portfolio-tips/
       - twitter (prob not)
     - Contact me form?
       - Forward to Email
+
+================= End Main Page =================
+
+=========== Weekly/Monthly Challenge ============
+
+- Header
+  - "Monthly Challenges"
+
+- List
+  - Background changes color between each element
+    - White with black bars
+    - White and Grey
+    - White and primary
+    - Grey and primary
+    - Rainbow (cause why not)
+
+-- List item
+  - Title - Theme (theme not necessary)
+  - [gif] of result
+  - Date started and Ended (* days)
+  - Short description about the project
