@@ -12,6 +12,7 @@ https://learntocodewith.me/posts/portfolio-tips/
   - Need a consistent theme for the site
 - Header
   - Need something unique
+    - MUST BE MOBILE SUPPORTED!!!
     - Doesn't need to be a list
     - Can be something a bit more unique
       - Maybe a game so select where to go?
