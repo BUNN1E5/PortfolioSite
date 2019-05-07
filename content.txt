@@ -18,14 +18,28 @@ https://learntocodewith.me/posts/portfolio-tips/
 
 - About me
   - A Photo
-  - Describe who I   am, what I do, what are my hobbies
+  - Describe who I am, what I do, what are my hobbies
     - Like being Patribots Programming mentor
   - Testimonials??
-    - Do I need these?
-  - Blog (I need to do this in order to level up my writing)
-    - Or blog videos
+    - Do I need these? Prob not
+  - Blog (I should do this)
+    - Write Ups
+      - Once a week or month?
+    - Videos
+      - Once a month or at the completion of a project?
 
-- Skills
+- Guides
+  - Basic Computer Vision
+    - Triangular Similarity
+    - Basic HSV detection
+  - Position Tracking
+    - Encoder based positional Tracking
+    - BLE Positioning System
+      - Summer project
+    - SLAM
+      - Future project
+
+- Skills (Bubbles?)
   - Languages
     - html
     - js
@@ -45,19 +59,25 @@ https://learntocodewith.me/posts/portfolio-tips/
     - Google Docs
 
 
--Previous Works?
+- Published Works?
   - SDSU Housing Application
+  - Ludum Dare 44
 
-- Current Projects (Work and Personal, Open or closed source)
+- Current Projects (Work and Personal)
+  - Language used for project (in bubble next to the name?)
+  - Open or closed source (lock icon next to them?)
   - For all projects I need a writeup for them
+  - Hyperlink for weekly/monthly projects (All JS canvas projects)
+
 - Volunteer Work (Maybe? If I can fill out more, this might be too much)
 
 
-- Resume
-- Contact Information
-  - Social Media Accounts
-    - github - https://github.com/BUNN1E5/
-    - linkedin - https://www.linkedin.com/in/jacob-golden-needham-3279bb133/
-    - twitter (prob not)
-  - Contact me form?
-    - Forward to Email
+- Bottom bar?
+  - Resume
+  - Contact Information
+    - Social Media Accounts
+      - github - https://github.com/BUNN1E5/
+      - linkedin - https://www.linkedin.com/in/jacob-golden-needham-3279bb133/
+      - twitter (prob not)
+    - Contact me form?
+      - Forward to Email
