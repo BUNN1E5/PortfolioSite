@@ -11,11 +11,14 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
   <link rel='stylesheet' href='scripts/github.min.css'>
-  <script type="text/javascript" src="scripts/underscore-min.js"></script>
-  <script type="text/javascript" src='scripts/github.min.js'></script>
-
-  <script type="text/javascript" src="scripts/IKArm.js"></script>
   <script type="text/javascript" src="scripts/index.js"></script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
 
 </head>
 
@@ -53,26 +56,44 @@
   </section>
 
   <!-- About  -->
-  <section id="About" class="section">
-    <div class="container has-text-centered">
-      <h1 class="title is-size-1">About</h1>
-      <div id="myProfile"></div>
+  <section id="Contact-Me" class="section is-primary">
+    <div class="columns is-centered">
+      <div class="column is-one-quarter">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input" type="Name" placeholder="Name">
+          <span class="icon is-small is-left">
+        <i class="fas fa-user"></i>
+
+        <p class="control has-icons-left has-icons-right">
+          <input class="input" type="email" placeholder="Email">
+          <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+        <p class="control">
+          <input class="input" type="text" placeholder="Subject">
+
+        <textarea class="textarea" placeholder="Message..."></textarea>
+      </div>
     </div>
   </section>
 
-  <!-- Skills  -->
-  <section id="Skills" class="section">
-    <div class="container has-text-centered">
-      <h1 class="title is-size-1">Skills</h1>
-    </div>
-  </section>
+  <!-- Footer Social Media -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <div class="social">
+        <a href="https://github.com/bunn1e5">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
 
-  <!-- Project -->
-  <section id="Projects" class="section is-primary">
-    <div class="container has-text-centered">
-      <h1 class="title is-size-1">Projects</h1>
-    </div>
-  </section>
+        <a href="https://www.linkedin.com/in/jacob-golden-needham-3279bb133/">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
 
-  <!-- Social Media / footer -->
+        <a href="https://codepen.io/bunn1e5/">
+            <i class="fab fa-codepen fa-2x"></i>
+        </a>
+      </div>
+      <p>Jacob Golden-Needham ©2019</p>
+    </div>
+  </footer>
+
 </body>

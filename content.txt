@@ -1,5 +1,8 @@
+--------------------Examples---------------------
+
 https://learntocodewith.me/posts/portfolio-tips/
 https://skillcrush.com/2015/03/12/impressive-tech-portfolio/
+http://findmatthew.com/
 
 --------------------Extra stuff------------------
 
@@ -8,7 +11,7 @@ https://skillcrush.com/2015/03/12/impressive-tech-portfolio/
 - Make sure I COMMENT MY CODE!!!
 - Request for testimonials?
   - Friends/Co-Workers?
-  
+
 - Maybe do dark color scheme??
 
 -------------------------------------------------
