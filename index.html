@@ -5,25 +5,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-  <link rel='stylesheet' href='scripts/github.min.css'>
-  <script type="text/javascript" src="scripts/index.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <script>
-    AOS.init();
-  </script>
+  <link rel='stylesheet' href='scripts/github.min.css'>
+  <script type="text/javascript" src="scripts/index.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/superhero/bulmaswatch.min.css">
+  <link rel="stylesheet" href="style.css">
+
+
 
 </head>
 
 <body>
-   <nav class="navbar is-fixed-top has-shadow is-spaced" >
+
+  <!-- Home  -->
+  <section id="Home" class="hero is-link is-fullheight">
+    <div class="hero-body">
+      <!--<canvas class="absolute overlay-canvas"></canvas>-->
+      <div class="column is-centered has-text-centered">
+        <div class="title is-size-1">Jacob Golden-Needham</div>
+        <div class="subtitle">Computer Science, Robotics, and the pursuit of knowledge</div>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+
+    </div>
+  </section>
+
+  <nav data-aos="fade-down" class="navbar is-fixed-top has-shadow is-spaced">
     <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -33,45 +49,40 @@
     <div class="navbar-menu navbar-end" id="navMenu">
       <a href="#Home" class="navbar-item">Home</a>
       <a href="#About" class="navbar-item">About</a>
-      <a href="#Skills" class="navbar-item">Skills</a>
       <a href="#Projects" class="navbar-item">Projects</a>
+      <a href="#Contact" class="navbar-item">Contact Me</a>
     </div>
     <!-- This is the hamburger for mobile view -->
-
   </nav>
 
-  <!-- Home  -->
-  <section id="Home" class="hero is-primary is-fullheight">
-    <div class="hero-body">
-      <!--<canvas class="absolute overlay-canvas"></canvas>-->
-      <div class="column is-centerd has-text-centered">
-        <div class="title is-size-1">Jacob Golden-Needham</div>
-        <div class="subtitle">Computer Science, Robotics, and the persuit of knowledge</div>
-      </div>
-    </div>
 
-    <div class="hero-foot">
-
+  <!-- Skills And About -->
+  <section id="About" class="section hero is-primary">
+    <div class="container is-centered has-text-centered">
+      <div class="title is-size-2">About</div>
     </div>
   </section>
 
-  <!-- About  -->
-  <section id="Contact-Me" class="section is-primary">
-    <div class="columns is-centered">
-      <div class="column is-one-quarter">
-        <p class="control has-icons-left has-icons-right">
-          <input class="input" type="Name" placeholder="Name">
-          <span class="icon is-small is-left">
-        <i class="fas fa-user"></i>
+  <!-- Contact  -->
+  <section id="Contact" class="section">
+    <div class="container">
+      <div data-aos="zoom-in" class="columns is-centered is-primary">
+        <div class="field column is-one-quarter">
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" type="Name" placeholder="Name">
+            <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
 
-        <p class="control has-icons-left has-icons-right">
-          <input class="input" type="email" placeholder="Email">
-          <span class="icon is-small is-left">
-        <i class="fas fa-envelope"></i>
-        <p class="control">
-          <input class="input" type="text" placeholder="Subject">
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" type="email" placeholder="Email">
+            <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+          <p class="control">
+            <input class="input" type="text" placeholder="Subject">
 
-        <textarea class="textarea" placeholder="Message..."></textarea>
+          <textarea class="textarea" placeholder="Message..."></textarea>
+          <a class="button is-dark is-pulled-right">Submit</a>
+        </div>
       </div>
     </div>
   </section>
