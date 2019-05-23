@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css-build": "node-sass --omit-source-map-url sass/theme.scss css/theme.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
   },
   "repository": {
     "type": "git",
@@ -27,10 +29,4 @@
     "bulma-start": "0.0.2"
   },
   "description": ""
-}
-
-"scripts": {
-  "css-build": "node-sass --omit-source-map-url sass/style.scss css/style.css",
-  "css-watch": "npm run css-build -- --watch",
-  "start": "npm run css-watch"
 }
