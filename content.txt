@@ -39,6 +39,15 @@ http://findmatthew.com/
       - Once a week or month?
     - Videos
       - Once a month or at the completion of a project?
+  - Skills (Bubbles?)
+    - Languages
+      - html
+      - js
+      - c#
+      - c++ (I need to review this though)
+      - java
+      - python
+      - git
 
 - Guides
   - Basic Computer Vision
@@ -50,16 +59,6 @@ http://findmatthew.com/
       - Summer project
     - SLAM
       - Future project
-
-- Skills (Bubbles?)
-  - Languages
-    - html
-    - js
-    - c#
-    - c++ (I need to review this though)
-    - java
-    - python
-    - git
 
   - Libraries & Technologies
     - OpenCV
