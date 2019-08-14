@@ -34,11 +34,6 @@ http://findmatthew.com/
     - Like being Patribots Programming mentor
   - Testimonials??
     - Do I need these? Prob not
-  - Blog (I should do this)
-    - Write Ups
-      - Once a week or month?
-    - Videos
-      - Once a month or at the completion of a project?
   - Skills (Bubbles?)
     - Languages
       - html
@@ -49,7 +44,13 @@ http://findmatthew.com/
       - python
       - git
 
-- Guides
+
+
+- Guides/Blogs
+  - Write Ups
+    - Once a week or month?
+  - Videos
+    - Once a month or at the completion of a project?
   - Basic Computer Vision
     - Triangular Similarity
     - Basic HSV detection
