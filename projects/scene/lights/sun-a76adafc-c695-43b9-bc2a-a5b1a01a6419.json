@@ -51,6 +51,6 @@
 	"type": 1,
 	"animations": [],
 	"ranges": [],
-	"isEnabled": true,
+	"isEnabled": false,
 	"parentId": null
 }

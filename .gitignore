@@ -1,3 +1,6 @@
+# Runnables
+*.AppImage
+
 # Logs
 logs
 *.log
