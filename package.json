@@ -1,0 +1,23 @@
+{
+  "name": "portfoliosite",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/BUNN1E5/PortfolioSite#readme",
+  "bugs": {
+    "url": "https://github.com/BUNN1E5/PortfolioSite/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BUNN1E5/PortfolioSite.git"
+  },
+  "license": "ISC",
+  "author": "bunn1e5",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "tailwind": "^4.0.0"
+  }
+}
