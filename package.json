@@ -1,23 +1,31 @@
 {
   "name": "portfoliosite",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/BUNN1E5/PortfolioSite#readme",
-  "bugs": {
-    "url": "https://github.com/BUNN1E5/PortfolioSite/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BUNN1E5/PortfolioSite.git"
-  },
-  "license": "ISC",
-  "author": "bunn1e5",
-  "type": "commonjs",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.13.3",
+    "daisyui": "^5.7.40",
+    "svelte": "^5.57.0",
+    "svelte-check": "^4.7.6",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
   },
   "dependencies": {
-    "tailwind": "^4.0.0"
+    "@fortawesome/fontawesome-svg-core": "^7.3.1",
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
+    "@fortawesome/svelte-fontawesome": "^0.2.4",
+    "@orillusion/core": "^0.9.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3"
   }
 }
