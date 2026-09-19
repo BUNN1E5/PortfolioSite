@@ -1,11 +1,9 @@
 {
     "name": "portfoliosite",
-    "main": "src/redirects.js",
+    "main": "./.svelte-kit/cloudflare/_worker.js",
     "compatibility_date": "2026-09-18",
     "assets": {
-        "binding": "assets",
-        "run_worker_first": true,
-        "directory": "./dist",
-        "not_found_handling": "single-page-application"
+        "directory": "./.svelte-kit/cloudflare",
+        "binding": "ASSETS"
     }
 }
