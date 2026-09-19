@@ -5,6 +5,7 @@
     "assets": {
         "binding": "assets",
         "run_worker_first": true,
-        "directory": "./demos"
+        "directory": "./demos",
+        "not_found_handling": "single-page-application"
     }
 }
