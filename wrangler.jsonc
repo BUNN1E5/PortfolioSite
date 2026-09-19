@@ -5,7 +5,7 @@
     "assets": {
         "binding": "assets",
         "run_worker_first": true,
-        "directory": "./src",
+        "directory": "./",
         "not_found_handling": "single-page-application"
     }
 }
