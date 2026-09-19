@@ -1,8 +1,7 @@
 import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
 
-export const load: PageLoad = async ({ params }) => {
-  const { repo } = params;
+export const load = async ({ params }) => {
+  const { post: repo } = params;
   
   const response = await fetch(
     `https://raw.githubusercontent.com/BUNN1E5/${repo}/blog/blog.md`

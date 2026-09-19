@@ -1,10 +1,13 @@
 <script>
     // local Custom Components
-    import SectionHeader from "./lib/SectionHeader.svelte";
-    import ShaderCard from "./lib/ShaderCard.svelte";
+    import "../app.css";
+    
+    import SectionHeader from "../lib/SectionHeader.svelte";
+    import ShaderCard from "../lib/ShaderCard.svelte";
 
     import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
     import { faSquareLinkedin, faSquareGithub, faItchIo } from "@fortawesome/free-brands-svg-icons";
+    
 </script>
 
 <!-------------------------Hero------------------------->
@@ -64,7 +67,7 @@
         <input type="text" class="input input-bordered w-full" />
         <textarea class="textarea textarea-bordered w-full"></textarea>
         <button type="button" class="btn btn-primary self-start">Send</button>
-    </form> 
+    </form>
 </SectionHeader>
 
 </div>
