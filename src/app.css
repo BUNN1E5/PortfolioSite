@@ -1,2 +1,37 @@
 @plugin "daisyui";
 @import "tailwindcss";
+
+@plugin "daisyui/theme" {
+  name: "techart";
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #161214;
+  --color-base-200: #221C1F;
+  --color-base-300: #2D2529;
+  --color-base-content: #E7E8E3;
+
+  --color-primary: #D73D3D;
+  --color-primary-content: #0B090A;
+
+  --color-secondary: #8D99AE;
+  --color-secondary-content: #0a0a0a;
+  
+  --color-accent: #F7B267;
+  --color-accent-content: #0B090A;
+
+  --color-neutral: #000000;
+  --color-neutral-content: #E7E8E3;
+
+  --radius-selector: 0.2rem;
+  --radius-field: 0.2rem;
+  --radius-box: 0.25rem;
+  --border: 1px;
+}
+
+@theme {
+  --font-sans: "SUSE", sans-serif;
+  --font-mono: "Major Mono Display", monospace;
+  --font-header: "Major Mono Display", monospace;
+}
