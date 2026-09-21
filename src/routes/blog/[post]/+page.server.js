@@ -1,6 +1,19 @@
 import { error } from '@sveltejs/kit';
-import { marked } from 'marked';
+import hljs from 'highlight.js/lib/core';
+import { Marked } from 'marked';
+import { markedHighlight } from 'marked-highlight';
 import markedKatex from 'marked-katex-extension';
+
+const marked = new Marked(
+  markedHighlight({
+    emptyLangClass: 'hljs',
+    langPrefix: 'hljs language-',
+    highlight(code, lang) {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+      return hljs.highlight(code, { language }).value;
+    }
+  })
+);
 
 marked.use(markedKatex({
   throwOnError: false
