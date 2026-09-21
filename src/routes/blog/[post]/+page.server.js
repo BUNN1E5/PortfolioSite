@@ -1,4 +1,5 @@
 import { error } from '@sveltejs/kit';
+import { marked } from 'marked';
 
 export const load = async ({ params }) => {
   const { post: repo } = params;
@@ -12,6 +13,7 @@ export const load = async ({ params }) => {
   }
   
   const markdown = await response.text();
+  const htmlOutput = marked.parse(markdown);
   
-  return { markdown, repo };
+  return { htmlOutput, repo };
 };
