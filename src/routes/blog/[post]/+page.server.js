@@ -15,5 +15,5 @@ export const load = async ({ params }) => {
   const markdown = await response.text();
   const htmlOutput = marked.parse(markdown);
   
-  return { htmlOutput, repo };
+  return { htmlContent: htmlOutput, repo };
 };
