@@ -1,5 +1,10 @@
 import { error } from '@sveltejs/kit';
 import { marked } from 'marked';
+import markedKatex from 'marked-katex-extension';
+
+marked.use(markedKatex({
+  throwOnError: false
+}));
 
 export const load = async ({ params }) => {
   const { post: repo } = params;

@@ -30,6 +30,7 @@
 		"@orillusion/core": "^0.9.2",
 		"@tailwindcss/vite": "^4.3.3",
 		"marked": "^18.0.13",
+		"marked-katex-extension": "^5.1.13",
 		"tailwindcss": "^4.3.3"
 	}
 }
