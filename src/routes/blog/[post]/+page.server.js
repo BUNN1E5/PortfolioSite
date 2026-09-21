@@ -18,11 +18,6 @@ marked.use(
   })
 );
 
-
-marked.use(markedKatex({
-  throwOnError: false
-}));
-
 export const load = async ({ params }) => {
   const { post: repo } = params;
   try {
