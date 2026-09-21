@@ -5,14 +5,14 @@ import { markedHighlight } from 'marked-highlight';
 import markedKatex from 'marked-katex-extension';
 
 marked.use(
-  markedHighlight({
-    emptyLangClass: 'hljs',
-    langPrefix: 'hljs language-',
-    highlight(code, lang) {
-      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-      return hljs.highlight(code, { language }).value;
-    }
-  }),
+  // markedHighlight({
+  //   emptyLangClass: 'hljs',
+  //   langPrefix: 'hljs language-',
+  //   highlight(code, lang) {
+  //     const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+  //     return hljs.highlight(code, { language }).value;
+  //   }
+  // }),
   markedKatex({
     throwOnError: false
   })
