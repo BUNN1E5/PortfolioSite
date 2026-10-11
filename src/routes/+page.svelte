@@ -1,7 +1,8 @@
 <script>
-    // local Custom Components
+
     import "../app.css";
     
+    // local Custom Components
     import SectionHeader from "../lib/SectionHeader.svelte";
     import ShaderCard from "../lib/ShaderCard.svelte";
 
@@ -22,13 +23,14 @@
     <a href="#projects" class="self-center mb-4 text-2xl animate-bounce">⌄</a>
 </section>
 
-<!-------------------------Page Size Setup------------------------->
-<div class="w-full flex flex-col items-stretch justify-center bg-base-100">
 
+<!-------------------------Page Size Setup------------------------->
+<!-- <div class="w-full mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col items-stretch justify-center bg-base-100"> -->
+<div class="mx-auto w-full max-w-7xl flex flex-col bg-base-100">
 
 <!-------------------------Projects------------------------->
 <SectionHeader title="Projects">
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-4 gap-4">
         <ShaderCard id="project-1"/>
         <ShaderCard id="project-2"/>
         <ShaderCard id="project-3"/>
