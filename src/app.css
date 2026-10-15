@@ -32,6 +32,6 @@
 
 @theme {
   --font-sans: "SUSE", sans-serif;
-  --font-mono: "Major Mono Display", monospace;
+  --font-mono: "SUSE Mono", monospace;
   --font-header: "Major Mono Display", monospace;
 }

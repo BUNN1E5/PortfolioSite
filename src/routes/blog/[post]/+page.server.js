@@ -4,6 +4,7 @@ import { marked } from 'marked';
 import { markedHighlight } from 'marked-highlight';
 import markedKatex from 'marked-katex-extension';
 
+
 marked.use(
   // markedHighlight({
   //   emptyLangClass: 'hljs',
@@ -17,6 +18,11 @@ marked.use(
     throwOnError: false
   })
 );
+
+marked.setOptions({
+  gfm: true,
+  breaks: true
+});
 
 export const load = async ({ params }) => {
   const { post: repo } = params;
