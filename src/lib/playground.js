@@ -71,6 +71,7 @@ class Playground extends HTMLElement {
 			}
 
 			preview = document.createElement('playground-preview');
+			preview.classList.add('playground-preview');
 			preview.setAttribute('project', projectId);
 			this.append(preview);
 			runButton.textContent = 'Run again';
