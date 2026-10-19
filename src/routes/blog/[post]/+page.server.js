@@ -1,14 +1,23 @@
 import { error } from '@sveltejs/kit';
-import hljs from 'highlight.js/lib/core';
+import hljs from 'highlight.js';
 import { marked } from 'marked';
 import { markedHighlight } from 'marked-highlight';
+import { gfmHeadingId } from "marked-gfm-heading-id";
 import markedKatex from 'marked-katex-extension';
 
-
 marked.use(
+  markedHighlight({
+	emptyLangClass: 'hljs',
+    langPrefix: 'hljs language-',
+    highlight(code, lang, info) {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+      return hljs.highlight(code, { language }).value;
+    }
+  }),
   markedKatex({
     throwOnError: false
-  })
+  }),
+  gfmHeadingId()
 );
 
 marked.setOptions({
