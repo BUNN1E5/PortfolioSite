@@ -22,6 +22,32 @@ class Playground extends HTMLElement {
 		project.id = projectId;
 		project.setAttribute('project-src', projectSrc);
 
+		const selectedFile = this.getAttribute('selected');
+		if (selectedFile) {
+			project.addEventListener(
+				'filesChanged',
+				(event) => {
+					if (!event.projectLoaded) return;
+
+					const files = project.files ?? [];
+					const fileToSelect = files.find(
+						(file) => file.name === selectedFile && !file.hidden
+					);
+					if (!fileToSelect) {
+						console.error(
+							`<code-playground selected="${selectedFile}"> must match a visible project file.`
+						);
+						return;
+					}
+
+					for (const file of files) {
+						file.selected = file === fileToSelect;
+					}
+				},
+				{ capture: true }
+			);
+		}
+
 		const editorId = `${projectId}-editor`;
 		const tabBar = document.createElement('playground-tab-bar');
 		tabBar.setAttribute('project', projectId);
@@ -30,6 +56,7 @@ class Playground extends HTMLElement {
 		const editor = document.createElement('playground-file-editor');
 		editor.id = editorId;
 		editor.setAttribute('project', projectId);
+		editor.setAttribute('line-numbers', '');
 
 		const runButton = document.createElement('button');
 		runButton.className = 'playground-run';
