@@ -2,11 +2,13 @@
     let { data } = $$props;
     //import "../../../app.css";
     import 'github-markdown-css/github-markdown.css'
+    import 'katex/dist/katex.min.css';
+    import './page.css';
     
     import { onMount } from "svelte";
 
     onMount(() => {
-        import('$lib/live-code.js');
+        import('$lib/playground.js');
     });
 </script>
 

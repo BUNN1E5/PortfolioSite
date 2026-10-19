@@ -6,14 +6,6 @@ import markedKatex from 'marked-katex-extension';
 
 
 marked.use(
-  // markedHighlight({
-  //   emptyLangClass: 'hljs',
-  //   langPrefix: 'hljs language-',
-  //   highlight(code, lang) {
-  //     const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-  //     return hljs.highlight(code, { language }).value;
-  //   }
-  // }),
   markedKatex({
     throwOnError: false
   })
@@ -36,7 +28,11 @@ export const load = async ({ params }) => {
     }
     
     const markdown = await response.text();
-    const htmlOutput = marked.parse(markdown);
+    const renderedMarkdown = await marked.parse(markdown);
+    const htmlOutput = renderedMarkdown.replace(
+      /(<\/?)playground-ide(?=[\s>])/gi,
+      '$1code-playground'
+    );
     
     return { htmlContent: htmlOutput, repo };
   } catch (err) {

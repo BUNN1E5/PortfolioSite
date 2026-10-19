@@ -31,10 +31,10 @@
 		"@tailwindcss/vite": "^4.3.3",
 		"github-markdown-css": "^5.9.0",
 		"highlight.js": "^11.12.0",
-		"livecodes": "^0.14.1",
 		"marked": "^18.0.13",
 		"marked-highlight": "^2.2.4",
 		"marked-katex-extension": "^5.1.13",
+		"playground-elements": "^0.21.2",
 		"tailwindcss": "^4.3.3"
 	}
 }
