@@ -20,7 +20,7 @@
 </div>
 
 <div class="flex w-full justify-center">
-    <article class="markdown-body mx-auto w-full max-w-4xl px-6">
+    <article class="markdown-body mx-auto w-full max-w-5xl px-6">
         {@html data.htmlContent}
     </article>
 </div>
