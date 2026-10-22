@@ -4,6 +4,7 @@
     import 'github-markdown-css/github-markdown.css'
     import 'katex/dist/katex.min.css';
     import './page.css';
+    import 'highlight.js/styles/vs2015.css'; 
     
     import { onMount } from "svelte";
 
