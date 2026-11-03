@@ -65,6 +65,7 @@ class Playground extends HTMLElement {
 		/** @type {import('playground-elements/playground-preview.js').PlaygroundPreview | null} */
 		let preview = null;
 		runButton.addEventListener('click', () => {
+			initialize();
 			if (preview) {
 				preview.reload();
 				return;
@@ -77,8 +78,29 @@ class Playground extends HTMLElement {
 			runButton.textContent = 'Run again';
 		});
 
-		this.append(project, tabBar, editor, runButton);
-		this.setAttribute('data-initialized', '');
+		/** @type {IntersectionObserver | null} */
+		let observer = null;
+		let initialized = false;
+		const initialize = () => {
+			if (initialized) return;
+			initialized = true;
+			this.append(project, tabBar, editor, runButton);
+			this.setAttribute('data-initialized', '');
+			observer?.disconnect();
+		};
+
+		this.append(runButton);
+		if ('IntersectionObserver' in window) {
+			observer = new IntersectionObserver(
+				(entries) => {
+					if (entries.some((entry) => entry.isIntersecting)) initialize();
+				},
+				{ rootMargin: '300px 0px' }
+			);
+			observer.observe(this);
+		} else {
+			initialize();
+		}
 	}
 }
 
