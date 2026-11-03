@@ -50,13 +50,13 @@ class Playground extends HTMLElement {
 
 		const editorId = `${projectId}-editor`;
 		const tabBar = document.createElement('playground-tab-bar');
-		tabBar.setAttribute('project', projectId);
-		tabBar.setAttribute('editor', editorId);
+		tabBar.project = project;
 
 		const editor = document.createElement('playground-file-editor');
 		editor.id = editorId;
-		editor.setAttribute('project', projectId);
 		editor.setAttribute('line-numbers', '');
+		editor.project = project;
+		tabBar.editor = editor;
 
 		const runButton = document.createElement('button');
 		runButton.className = 'playground-run';
@@ -73,7 +73,7 @@ class Playground extends HTMLElement {
 
 			preview = document.createElement('playground-preview');
 			preview.classList.add('playground-preview');
-			preview.setAttribute('project', projectId);
+			preview.project = project;
 			this.append(preview);
 			runButton.textContent = 'Run again';
 		});
