@@ -6,9 +6,66 @@ import 'playground-elements/playground-preview.js';
 let nextProjectId = 0;
 
 class Playground extends HTMLElement {
+	static get observedAttributes() {
+		return [
+			'width',
+			'height',
+			'editor-height',
+			'preview-height',
+			'editor-aspect-ratio',
+			'preview-aspect-ratio'
+		];
+	}
+
+	attributeChangedCallback() {
+		this.applySizeAttributes();
+	}
+
+	applySizeAttributes() {
+		const width = this.getAttribute('width');
+		this.style.removeProperty('width');
+		if (width !== null) {
+			if (CSS.supports('width', width)) {
+				this.style.width = width;
+			} else {
+				console.error(`<code-playground> width="${width}" must be a valid CSS width.`);
+			}
+		}
+
+		const sharedHeight = this.getAttribute('height');
+		if (sharedHeight !== null && !CSS.supports('height', sharedHeight)) {
+			console.error(`<code-playground> height="${sharedHeight}" must be a valid CSS height.`);
+		}
+
+		for (const panel of ['editor', 'preview']) {
+			const height = this.getAttribute(`${panel}-height`) ?? sharedHeight;
+			const heightProperty = `--code-playground-${panel}-height`;
+			this.style.removeProperty(heightProperty);
+			if (height !== null && CSS.supports('height', height)) {
+				this.style.setProperty(heightProperty, height);
+			} else if (height === null && this.hasAttribute(`${panel}-aspect-ratio`)) {
+				this.style.setProperty(heightProperty, 'auto');
+			}
+
+			const aspectRatio = this.getAttribute(`${panel}-aspect-ratio`);
+			const aspectRatioProperty = `--code-playground-${panel}-aspect-ratio`;
+			this.style.removeProperty(aspectRatioProperty);
+			if (aspectRatio !== null) {
+				if (CSS.supports('aspect-ratio', aspectRatio)) {
+					this.style.setProperty(aspectRatioProperty, aspectRatio);
+				} else {
+					console.error(
+						`<code-playground> ${panel}-aspect-ratio="${aspectRatio}" must be a valid CSS aspect ratio.`
+					);
+				}
+			}
+		}
+	}
+
 	connectedCallback() {
 		if (this.hasAttribute('data-initialized')) return;
 
+		this.applySizeAttributes();
 		this.classList.add('playground-theme-material-darker');
 
 		const projectSrc = this.getAttribute('project-src');

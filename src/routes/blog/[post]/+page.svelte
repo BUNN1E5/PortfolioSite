@@ -7,6 +7,7 @@
     import 'highlight.js/styles/vs2015.css'; 
     
     import { onMount } from "svelte";
+    import Footer from '$lib/Footer.svelte';
 
     onMount(() => {
         import('$lib/playground.js');
@@ -25,3 +26,4 @@
         {@html data.htmlContent}
     </article>
 </div>
+<Footer></Footer>

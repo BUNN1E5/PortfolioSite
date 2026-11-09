@@ -30,7 +30,9 @@
 }
 
 .markdown-body code-playground playground-file-editor {
-    height: 400px;
+    width: 100%;
+    height: var(--code-playground-editor-height, 400px);
+    aspect-ratio: var(--code-playground-editor-aspect-ratio, auto);
 }
 
 .markdown-body code-playground .playground-run {
@@ -51,7 +53,9 @@
 }
 
 .markdown-body code-playground playground-preview {
-    height: 400px;
+    width: 100%;
+    height: var(--code-playground-preview-height, 400px);
+    aspect-ratio: var(--code-playground-preview-aspect-ratio, auto);
     border-top: var(--playground-border);
 }
 
